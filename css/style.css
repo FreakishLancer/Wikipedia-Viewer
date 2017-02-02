@@ -28,22 +28,9 @@ div#random-article {
     font-weight: bold;
 }
 
-.preview {
-    display: none;
-}
-
-.hover-previewer:hover + .preview,
-.preview:hover {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    float: right;
-}
-
 .result {
     background-color: #eceeef;
     float: left;
-    width: 50%;
     height: 280px;
     border: .1em solid white;
     padding: 0;
@@ -64,13 +51,9 @@ div#random-article {
     text-align: justify;
 }
 
-iframe {
-    border-radius: 0.3em;
-    margin: 0;
-    padding: 0;
-    border: 0 solid white;
-}
-
-.separator {
-    margin: 2rem;
+#result-number {
+    color: black;
+    text-align: left;
+    left: 4px;
+    position: absolute;
 }
