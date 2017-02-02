@@ -18,6 +18,16 @@ h1 {
     font-size: 4em;
 }
 
+footer {
+    margin: auto;
+    font-size: .75em;
+}
+
+#footer-container {
+    bottom: 0;
+    position: absolute;
+}
+
 .input-group {
     margin: 0 auto;
 }

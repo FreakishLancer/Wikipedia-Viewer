@@ -1,12 +1,14 @@
 function getSearchResults() {
     let searchTerm = $("#search-term").val();
-    let API = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchTerm}`;
+    let API = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchTerm}&limit=18`;
 
     $.ajax({
         url: API,
         dataType: 'jsonp',
         success: function (searchResults) {
             $("#search-results").html("");
+
+            $("#footer-container").css("position", "relative");
 
             for (let i = searchResults[1].length - 1; i >= 0; i--) {
                 $("#search-results").prepend(
