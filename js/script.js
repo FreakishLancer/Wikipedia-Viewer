@@ -33,7 +33,7 @@ $(document).ready(() => {
     });
 
     $("#search-term").keypress(key => {
-        if (keyPress.keyCode === 13) {
+        if (key.keyCode === 13) {
             getSearchResults();
         }
     })
