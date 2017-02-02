@@ -8,7 +8,9 @@ function getSearchResults() {
         success: function (searchResults) {
             $("#search-results").html("");
 
-            $("#footer-container").css("position", "relative");
+            if (searchResults[1].length > 6) {
+                $("#footer-container").css("position", "relative");
+            }
 
             for (let i = searchResults[1].length - 1; i >= 0; i--) {
                 $("#search-results").prepend(
@@ -21,6 +23,8 @@ function getSearchResults() {
                         </div>
                     </div>`);
             }
+
+            
         }
     });
 }
