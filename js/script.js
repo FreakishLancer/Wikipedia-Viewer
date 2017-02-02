@@ -1,4 +1,8 @@
 $(document).ready(() => {
+    $(() => {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
     $("#submit-search").on("click", () => {
         let searchTerm = $("#search-term").val();
         console.log(searchTerm);

@@ -14,18 +14,20 @@
     </head>
     <body>
         <header>
-            <div class="container-fluid text-center">
+            <div class="container text-center">
                 <div class="jumbotron page-header" id="main-header">
                     <h1>Wikipedia Viewer</h1>
                 </div>
-                <div class="input-group input-group-sm row">
+                <div class="input-group input-group-sm row col-xl-4 col-lg-5 col-md-7 col-sm-10">
                     <input type="text" id="search-term" class="form-control" placeholder="Search for Wiki article...">
                     <span class="input-group-btn">
-                                    <button id="submit-search" class="btn btn-secondary">Search</button>
-                                </span>
+                        <button id="submit-search" class="btn btn-secondary">Search</button>
+                    </span>
                 </div>
                 <div id="random-article">
-                    <a class="hover-previewer" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for random article</a><div class="preview"><iframe src="https://en.wikipedia.org/wiki/Special:Random" width="768px" height="306px"></iframe></div>
+                    <a class="hover-previewer" href="https://en.wikipedia.org/wiki/Special:Random" data-toggle="tooltip"
+                        data-original-title="https://en.wikipedia.org/wiki/Special:Random">Click here for random article</a>
+                    <div class="preview"><iframe src="https://en.wikipedia.org/wiki/Special:Random" width="768px" height="306px"></iframe></div>
                 </div>
             </div>
         <header>
