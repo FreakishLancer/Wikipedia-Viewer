@@ -13,13 +13,19 @@ body {
     vertical-align: middle;
 }
 
+h1 {
+    font-family: "Crimson Text", "Helvetica", sans-serif;
+    font-size: 4em;
+}
+
 .input-group {
     margin: 0 auto;
 }
 
 div#random-article {
-    padding: 1rem 0rem 0rem;
+    padding: 1rem 0rem 2rem;
     font-size: 0.9em;
+    font-weight: bold;
 }
 
 .preview {
@@ -30,6 +36,32 @@ div#random-article {
 .preview:hover {
     display: block;
     position: absolute;
+    z-index: 100;
+    float: right;
+}
+
+.result {
+    background-color: #eceeef;
+    float: left;
+    width: 50%;
+    height: 280px;
+    border: .1em solid white;
+    padding: 0;
+}
+
+.result:hover {
+    background-color: lightgray;
+}
+
+.card-title {
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.3em;
+    background-color: white;
+}
+
+.card-text {
+    color: black;
+    text-align: justify;
 }
 
 iframe {
@@ -37,4 +69,8 @@ iframe {
     margin: 0;
     padding: 0;
     border: 0 solid white;
+}
+
+.separator {
+    margin: 2rem;
 }

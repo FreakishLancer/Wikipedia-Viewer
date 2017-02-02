@@ -1,23 +1,39 @@
+function getSearchResults() {
+    let searchTerm = $("#search-term").val();
+    let API = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchTerm}`;
+
+    $.ajax({
+        url: API,
+        dataType: 'jsonp',
+        success: function (searchResults) {
+            $("#search-results").html("");
+
+            for (let i = 0; i < searchResults[1].length; i++) {
+                $("#search-results").prepend(
+                    `<div class="result card col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="card-block">
+                            <a class="card-link" href=${searchResults[3][i]}>
+                            <h2 class="card-title card-header">${searchResults[1][i]}</h2>
+                            <p class="card-text">${searchResults[2][i]}</p></a>
+                        </div>
+                    </div>`);
+            }
+        }
+    });
+}
+
 $(document).ready(() => {
     $(() => {
         $('[data-toggle="tooltip"]').tooltip();
     });
 
     $("#submit-search").on("click", () => {
-        let searchTerm = $("#search-term").val();
-        console.log(searchTerm);
+        getSearchResults();
     });
-    $.ajax({
-        url: "//en.wikipedia.org/w/api.php",
-        data: {
-            action: "query",
-            list: "search",
-            srsearch: "Hello",
-            format: "json"
-        },
-        dataType: "jsonp",
-        success: x => {
-            console.log("title", x.query.search[0].title);
+
+    $("#search-term").keypress(key => {
+        if (keyPress.keyCode === 13) {
+            getSearchResults();
         }
-    });
+    })
 });
