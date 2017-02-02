@@ -13,17 +13,28 @@ body {
     vertical-align: middle;
 }
 
-h1 {
-    border-radius: 0.3rem;
-    background-color: lightslategray;
-    padding: 0.5rem;
-}
-
 .input-group {
     margin: 0 auto;
-    width: 50%;
 }
 
-#random-article {
+div#random-article {
     padding: 1rem 0rem 0rem;
+    font-size: 0.9em;
+}
+
+.preview {
+    display: none;
+}
+
+.hover-previewer:hover + .preview,
+.preview:hover {
+    display: block;
+    position: absolute;
+}
+
+iframe {
+    border-radius: 0.3em;
+    margin: 0;
+    padding: 0;
+    border: 0 solid white;
 }
